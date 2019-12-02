@@ -37,53 +37,40 @@ const siteContent = {
   },
 };
 
-// Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 let ctaImage = document.getElementById("cta-img");
 ctaImage.setAttribute('src', siteContent["cta"]["img-src"]);
 let middleImage = document.getElementById("middle-img");
 middleImage.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
-
 let links = document.querySelectorAll("nav a");
 links.forEach((aTag, index) => {
   aTag.innerHTML = siteContent.nav[`nav-item-${index+1}`];
 });
-
 let ctaHeader = document.querySelector('.cta-text h1');
 ctaHeader.innerHTML = siteContent.cta.h1.split(' ').join('<br />');
-
 let ctaButton = document.querySelector('.cta-text button');
 ctaButton.textContent = siteContent.cta.button;
-
 let topContentH4 = document.querySelectorAll('.text-content h4');
-
 topContentH4[0].innerHTML = siteContent["main-content"]["features-h4"];
 topContentH4[1].innerHTML = siteContent["main-content"]["about-h4"];
 topContentH4[2].innerHTML = siteContent["main-content"]["services-h4"];
 topContentH4[3].innerHTML = siteContent["main-content"]["product-h4"];
 topContentH4[4].innerHTML = siteContent["main-content"]["vision-h4"];
-
 let topContentP = document.querySelectorAll('.text-content p');
-
 topContentP[0].innerHTML = siteContent["main-content"]["features-content"];
 topContentP[1].innerHTML = siteContent["main-content"]["about-content"];
 topContentP[2].innerHTML = siteContent["main-content"]["services-content"];
 topContentP[3].innerHTML = siteContent["main-content"]["product-content"];
 topContentP[4].innerHTML = siteContent["main-content"]["vision-content"];
-
 let contactH4 = document.querySelector('.contact h4');
 contactH4.textContent = siteContent["contact"]["contact-h4"];
-
 let contactP = document.querySelectorAll('.contact p');
-
 contactP[0].textContent = siteContent["contact"]["address"];
 contactP[1].textContent = siteContent["contact"]["phone"];
 contactP[2].textContent = siteContent["contact"]["email"];
-
 let footer = document.querySelector('footer p');
 footer.textContent = siteContent["footer"]["copyright"];
-
 links.forEach((aTag) => {
   aTag.style.color = 'green';
 });
